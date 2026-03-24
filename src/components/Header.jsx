@@ -52,6 +52,49 @@ ${js}
         </motion.div>
         <h1 className="font-bold text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-500 dark:from-blue-400 dark:to-purple-400">CodeStudio</h1>
       </div>
+
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex items-center gap-3 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.1)] backdrop-blur-md cursor-default hover:bg-emerald-500/20 transition-colors duration-300"
+        >
+          <div className="relative flex items-center justify-center w-2.5 h-2.5">
+            <motion.div
+              animate={{ scale: [1, 2.5], opacity: [0.7, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
+              className="absolute inset-0 bg-emerald-500 rounded-full"
+            />
+            <div className="absolute inset-0 z-10 bg-emerald-500 rounded-full shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
+          </div>
+          <span className="text-xs font-bold tracking-widest text-emerald-600 dark:text-emerald-400 uppercase">
+            Live Environment
+          </span>
+          <div className="flex items-end gap-0.5 h-3 ml-1">
+            <motion.div 
+              animate={{ height: ["4px", "12px", "4px"] }} 
+              transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }} 
+              className="w-1 bg-emerald-500/80 rounded-t-sm" 
+            />
+            <motion.div 
+              animate={{ height: ["12px", "4px", "12px"] }} 
+              transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }} 
+              className="w-1 bg-emerald-500/80 rounded-t-sm" 
+            />
+            <motion.div 
+              animate={{ height: ["6px", "12px", "6px"] }} 
+              transition={{ duration: 0.9, repeat: Infinity, ease: "easeInOut" }} 
+              className="w-1 bg-emerald-500/80 rounded-t-sm" 
+            />
+            <motion.div 
+              animate={{ height: ["8px", "4px", "8px"] }} 
+              transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }} 
+              className="w-1 bg-emerald-500/80 rounded-t-sm" 
+            />
+          </div>
+        </motion.div>
+      </div>
       
       <div className="flex items-center gap-3">
         <motion.button 
